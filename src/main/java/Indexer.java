@@ -41,9 +41,9 @@ class Indexer {
         indexWriter.addDocument(document);
     }
 
-    int createIndex(String dataDirPath, FileFilter filter) throws IOException {
+    int createIndex(FileFilter filter) throws IOException {
         // Get all files in the data directory
-        File[] files = new File(dataDirPath).listFiles();
+        File[] files = new File("./src/main/Data").listFiles();
 
         for (File file : files != null ? files : new File[0])
             if(!file.isDirectory() && !file.isHidden() && file.exists() && file.canRead() && filter.accept(file))

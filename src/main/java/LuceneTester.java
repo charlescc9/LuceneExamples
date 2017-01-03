@@ -45,7 +45,7 @@ public class LuceneTester {
         long startTime = System.currentTimeMillis();
 
         // Index all documents
-        int numIndexed = indexer.createIndex("./src/main/Data", new TextFileFilter());
+        int numIndexed = indexer.createIndex(new TextFileFilter());
         indexer.close();
 
         System.out.println(numIndexed + " File indexed in " + (System.currentTimeMillis() - startTime) + "ms");

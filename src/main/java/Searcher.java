@@ -29,7 +29,7 @@ class Searcher {
 
     TopDocs search() throws IOException, ParseException {
         // Search query
-        Query query = queryParser.parse("1990");
+        Query query = queryParser.parse("Reena");
         return indexSearcher.search(query, LuceneConstants.MAX_SEARCH);
     }
 
